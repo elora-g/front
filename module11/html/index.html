@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="../css/normalize.css" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<script src="../Chart.js-master/dist/Chart.js"></script>
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<title>John Doe</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<h1>
+				<a href="#">
+					<img src="../img/logo.svg" id="logo-header" alt="Logo John Doe" /> 
+				John Doe
+				</a>
+				</h1>
+				<ul>
+					<li class="nav-header">
+						<a href="#" class="nav-header">
+							<i class="fa fa-home nav-header-icons" aria-hidden="true"></i>
+							Accueil
+						</a>
+					</li>
+					<li class="nav-header">
+						<a href="#" class="nav-header">
+							<i class="fa fa-folder-open nav-header-icons" aria-hidden="true"></i>
+							Réalisations
+						</a>
+					</li>
+					<li class="nav-header">
+						<a href="#" class="nav-header">
+							<i class="fa fa-envelope nav-header-icons" aria-hidden="true"></i>
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<section id="portfolio-description-header">
+				<h2>Bonjour et Bienvenue sur mon portfolio</h2>
+				<p class="text-background-image">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<button>Découvrez-moi !</button>
+			</section>
+		</header>
+
+		<main>
+			<section id="donut-chart-section">
+				<h3>Mes compétences</h3>
+				<canvas id="donutChart">
+					Diagramme Donut décrivant les compétences de John Doe
+				</canvas>
+				<script>
+					var data = {
+    						labels: [
+    							"HTML",
+       							"CSS", //ce sont des libellés, 
+       							"JavaScript" //il y en a trois, pour 3 catégories. Ce nombre devra être cohérent avec le tableau ci dessous
+   							],
+    						datasets: [{
+            					data: [40, 35, 25], // ici, ce sont les valeurs relatives pour chaque catégorie.
+           						backgroundColor: [ //ici, ce sont les couleurs que tu veux pour les portions de doughnut.
+           							"#F3453C",
+           							"#F4813A",
+                					"#F5AE28"
+            					],
+           						hoverBackgroundColor: [ //ici, les couleurs au survol de la souris, 
+                					"#FF0000",
+               						"#FF4500",
+                					"#FFD700"
+            					]
+        					}]
+						};
+						var ctx = document.getElementById("donutChart");//ctx est "la zone de dessin" (entre guillemet, car c'est pas tout à fait exact, mais tant qu'on a pas plus vu ca ensemble, j'ai pas mieux à te proposer)
+						var myDoughnutChart = new Chart(ctx, { //on lui dit te faire un nouveau chart, en prennant en parametre le ctx (défini avant 
+   							type: 'doughnut',  //type de graphe, si tu veux essaye "pie"
+    						data: data // on les a défini au dessus.
+					});
+				</script>
+			</section>
+			<section id="realisations-section">
+				<h3>Mes réalisations</h3>
+				<article class="realisations-article">
+					<a href=#>
+						<i class="fa fa-coffee article-logo" aria-hidden="true"></i>
+					</a>
+					<h4>On discute</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</article>
+				<article class="realisations-article">
+					<a href=#>
+						<i class="fa fa-flask article-logo" aria-hidden="true"></i>
+					</a>
+					<h4>On tente</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</article>
+				<article class="realisations-article">
+					<a href=#>
+						<i class="fa fa-code article-logo" aria-hidden="true"></i>
+					</a>
+					<h4>On code</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</article>
+			</section>
+			<section id="realisations-examples-section">
+				<h3>Quelques exemples de réalisations</h3>
+				<article class="realisations-examples-article">
+					<h5>Orange Juice :</h5>
+					<p class="realisations-examples-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<img src="../img/real/1.png" alt="Photo d'agrumes" class="realisations-examples-img" />
+					<a href="#" class="read-more">
+						En savoir plus
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					</a>
+				</article>
+				<article class="realisations-examples-article">
+					<h5>Time Past :</h5>
+					<img src="../img/real/2.png" alt="Photo d'un réveil" class="realisations-examples-img" />
+					<p class="realisations-examples-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<a href="#" class="read-more">
+						En savoir plus
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					</a>
+				</article>
+				<article class="realisations-examples-article">
+					<h5>Aqua Plant :</h5>
+					<p class="realisations-examples-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<img src="../img/real/3.png" alt="Photo d'une plante aquatique" class="realisations-examples-img" />
+					<a href="#" class="read-more">
+						En savoir plus
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					</a>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<h3>Contactez-moi</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</p>
+			<form>
+				<input type="text" placeholder="Votre prénom" id="firstname-form">
+				<input type="email" placeholder="Votre mail" id="email-form">
+				<textarea placeholder="Votre message"></textarea> 
+			</form>
+		</footer>
+	</body>
+
+</html>

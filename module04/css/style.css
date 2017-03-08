@@ -1,0 +1,201 @@
+/* COULEURS 
+fond bleu header + News : #25B3B4;
+bleu fond Today's Special Recipes + texte News : #B6DFDD
+bleu fond boutons Read More + bordures header & News : #1B9CA2
+gris texte : #424953;
+Texte header : #FFFFFF;
+Dates et "News" : #8CD3C3;
+*/
+
+/* POLICES
+
+Open Sans
+Slabo 27 px (nav et titres)
+
+*/
+
+/* PROPRIETES GENERALES */
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	background-image: url("../img/fond.png");
+}
+
+body{
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, nav{
+	font-family: 'Slabo 27px', serif;
+}
+
+/* HEADER */ 
+
+header{
+	background-color: #25B3B4;
+	margin-top: 5%;	
+	border-top: 4px solid #1B9CA2;
+	border-bottom: 4px solid #1B9CA2;
+}
+
+#logo-header img{
+	display: block;
+	margin: 0 auto;
+}
+
+nav{
+	text-align: center;
+}
+
+.nav-header{
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	margin: 1em 0.5em;
+}
+
+/* MAIN */ 
+
+/* GENERALITES */ 
+
+main{
+	width: 60%;
+	margin: auto;
+}
+
+h1, h3, h4, p{
+	color: #424953;
+}
+
+h1{
+	font-size: 2.2em;
+}
+
+h2{
+	color: #1B9CA2;
+	font-size: 3.5em;
+	text-align: center;
+	margin: 5% 0;
+}
+
+h3{
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 4%;
+}
+
+h4{
+	font-size: 1.6em;
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+p{
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.9em;
+	line-height: 1.8em;
+	margin: 1.5em auto;
+}
+
+#today-section, #news-section{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* SECTION WELCOME */ 
+
+#welcome-section{
+	width: 65%;
+	text-align: center;
+	margin: 3% auto 5%;
+}
+
+/* SECTION TODAY */ 
+
+#today-section{
+	width: 68%;
+	background-color: #B6DFDD;
+	margin-right: 2%;
+}
+
+.today-article{
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	padding: 0 5%;
+}
+
+.fa-tint{
+	font-size: 0.9em;
+	color: #25B3B4;
+	padding: 0 4px;
+}
+
+.today-article-image{
+	border-radius: 50px;
+	float: left;
+	margin-right: 5%;
+}
+
+.read{
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.9em;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #1B9CA2;
+	padding: 0.75em 0.5em;
+	float: right;
+	margin-bottom: 15%;
+}
+
+.fa-plus-circle{
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+/* SECTION NEWS */ 
+
+#news-section{
+	width: 29%;
+	background-color: #25B3B4;
+	border: 4px solid #1B9CA2;
+	padding: 3% 2%;
+}
+
+#news-section img{
+	float: right;
+	margin: -26% -26% 0 0;
+}
+
+#news-section p{
+	color: #FFFFFF;
+	font-size: 0.8em;
+}
+
+h5, .link-news-date{
+	font-size:1.1em;
+	color: #FFFFFF;
+	margin-bottom: 1em;
+}
+
+.link-news-date{
+	text-decoration: none;
+	color: #8CD3C3;
+}
+
+.fa-comment, span{
+	color: #FFFFFF;
+}
+
+/* FOOTER */ 
+
+footer{
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	margin-top: 2%;
+	text-align: center;
+}

@@ -1,0 +1,204 @@
+/* COULEURS
+
+Bleu Nav : #50C5B7
+Bleu bandeau promo : #75D1C6
+Vert Articles Main : B7B12E
+Bleu Footer + th + placeholder: #49C3B4
+Texte titres, td et formulaire : #364B60
+tableau bordures : #CCCCCC
+fond gris foncé F2F2F2
+fond gris clair : FAFAFA;
+*/
+
+/* POLICES
+
+Open Sans pour les textes
+Courgette pour les titres et le nav
+*/
+
+/* PROPRIETES GENERALES */
+
+*{
+	box-sizing: border-box;
+}
+
+h2, h3, h4, nav, th{
+	font-family: "Courgette", cursive;
+	text-align: center;
+	font-weight: normal;
+	color: #364B60;
+}
+
+.classdate-table,.classhour-table,label, select{
+	font-family: "Open Sans", sans-serif;
+	color: #364B60;
+	font-size: 0.9em;
+}
+
+h1, .nav-header{
+	display: inline-block;
+}
+
+/* HEADER*/
+
+h1 {
+	margin: 0;
+}
+
+header ul{
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.fa{
+	display: block;
+}
+
+.nav-header{
+	text-decoration: none;
+	color: #50C5B7;
+	font-size: 1.1em;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 0.7em;
+}
+
+
+/* MAIN */
+
+main{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* TABLEAU */
+
+table{
+	min-width: 100%;
+	margin-bottom: 2%;
+}
+th,td{
+	border: 1px solid #CCCCCC;
+	padding: 0.4em;
+}
+
+.grey-fond{
+	background-color: #F2F2F2;
+}
+
+.classdate-table{
+	min-width: 40%;
+}
+.classhour-table{
+	min-width: 20%;
+}
+
+.classdate-table,.classhour-table{
+	font-weight: bold;
+}
+
+th, .classdate-table{
+	text-align: left;
+}
+
+th{
+	background-color: #49C3B4;
+	color: #FFFFFF;
+	font-size: 1.2em;
+}
+
+ /* Réserver ce créneau */
+ 
+.classselect-table > input[type="checkbox"]{
+ 	position: absolute;
+  	left: 3%;
+  	top: 25%;
+  	opacity: 0;
+}
+
+.classselect-table > input[type="checkbox"] +label:after {
+content: 'Réserver ce créneau';
+  font-size: 1em;
+  color: #49C3B4;
+}
+
+.classselect-table > input[type="checkbox"]:checked+label:after {
+content: 'Vous avez sélectionné ce créneau';
+  font-size: 1em;
+  font-weight: bold;
+  color: #49C3B4;
+}
+/* FORMULAIRE */
+
+h3{
+	margin-top: 3%;
+}
+
+.lightblue-form{
+	font-size: 0.9em;
+	color: #49C3B4;
+}
+
+#firstname-form, #name-form, #email-form{
+	margin-top: 7%;
+	border: none;
+	border-bottom: 1px solid #49C3B4;
+	padding: 1%;
+}
+
+#firstname-form, #name-form{
+	width: 48%;
+}
+
+#firstname-form{
+	margin-right: 1.5%;
+}
+
+#name-form{
+	margin-left: 1.5%;
+}
+
+#email-form{
+	width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin: 0 2%;
+}
+
+h4{
+	margin: 4% auto;
+}
+
+select{
+	width:100%;
+	margin-top: 2%;
+	margin-bottom: 4%;
+	padding: 0.5%;
+	border: 1px solid #49C3B4;
+	background-color: #FFFFFF;
+}
+
+button{
+	background-color: #49C3B4;
+	border: none;
+	padding: 1% 2.5%;
+	color: #FFFFFF;
+}
+
+ /* FOOTER */
+
+footer{
+	background-color: #42C3B4;
+	padding: 2.5% 0;
+	margin-top: 3%;
+}
+
+.legal-notice-footer{
+	font-size: 0.7em;
+	color: #FFFFFF;
+	text-align: center;
+}
+

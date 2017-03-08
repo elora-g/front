@@ -1,0 +1,121 @@
+/* Couleurs : 
+
+#31A894 : Bleu bandeau nav, h2
+#B7DCB1 : vert fond aside
+#68696D : gris texte
+#F2F1F4 : fond de page;
+
+Polices : 
+
+texte : font-family: "Open Sans", sans-serif; 
+titres et nav : Pt sans narrow;
+
+
+*/
+
+
+/* PROPRIETES GENERALES */
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #F1F2F4;
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1em;
+}
+
+
+ul, h2{
+	background-color: #31A894;
+	padding: 1%;
+}
+
+ul{
+	margin:0;
+}
+
+.nav-header, h2{
+	color : #FFFFFF;
+	font-family: 'PT Sans Narrow', sans-serif;
+	margin : none;
+}
+
+/* Header */
+
+header{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+.nav-header{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1.3rem;
+	padding : 0 3%;
+}
+
+
+/* Main */
+
+main{
+	font-size: 0; /* Pour enlever le white-space lié au inline block*/
+}
+
+section, aside{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	padding: 4%;
+}
+
+section{
+	width : 70%;
+}
+
+aside{
+	width : 30%;
+	background-color: #B7DCB1;
+}
+
+
+
+#article-castle-image{
+	max-width: 100%
+}
+
+h2{
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.7rem;
+}
+
+p{
+	line-height: 2rem;
+	color: #68696D;
+}
+
+/* Media Queries */
+
+/* Attention l'ordre des media queries peut avoir une incidence */
+
+@media screen and (max-width: 992px) {
+	body{
+		width : 100%;
+	}
+	section, aside{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-header{
+		display: block;
+	}
+	aside{
+		display: none;
+	}
+}
